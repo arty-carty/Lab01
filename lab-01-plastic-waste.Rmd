@@ -1,6 +1,6 @@
 ---
 title: "Lab 01 - Plastic waste"
-author: "Arthur Cartwright"
+author: "Team 1a"
 date: "`r Sys.Date()`"
 output: html_document
 ---
@@ -18,17 +18,30 @@ plastic_waste <- read_csv("data/plastic-waste.csv")
 ```
 
 ### Exercise 1
+ggplot(data = plastic_waste, aes(x = plastic_waste_per_cap, fill = continent)) +
+  geom_histogram(binwidth = 0.2)+
+  facet_wrap(~continent)+
+  labs(
+    x = "Plastic Waste per capita (kg/day)",
+    y = "Count",
+    title = "Plastic Waste per capita faceted by Continent"
+)
+plastic_waste %>%
+  filter(plastic_waste_per_cap > 3.5)
 
+<<<<<<< HEAD
 ggplot(data = plastic_waste, 
        mapping = aes(x = plastic_waste_per_cap, 
                      color = continent, 
                      fill = continent)) +
-  geom_density(alpha = 0.7)
+  geom_density(alpha = 0.4)
 
 
 ```{r plastic-waste-continent}
 # remove this comment and add the code for Exercise 1 here
 ```
+=======
+>>>>>>> 86717f8a0135fb3b9aa83cd3b015b65d53667a86
 
 ### Exercise 2
 
