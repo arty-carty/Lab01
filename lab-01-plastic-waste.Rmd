@@ -32,9 +32,9 @@ plastic_waste %>%
 
 ### Exercise 2
 
-```{r plastic-waste-density}
-# remove this comment and add the code for Exercise 2 here
-```
+ggplot(data = plastic_waste, aes(x= plastic_waste_per_cap, color = continent, fill = continent))+
+  geom_density(alpha = 0.2)
+
 
 ### Exercise 3
 
@@ -52,29 +52,22 @@ plastic_waste %>%
 
 *Remove this text, and add your answer for Exercise 5 here.*
 
-```{r plastic-waste-mismanaged}
-# remove this comment and add the code for Exercise 5 here
-```
+ggplot(data = plastic_waste, aes(x= plastic_waste_per_cap, y = mismanaged_plastic_waste_per_cap))+ geom_point()
 
 ### Exercise 6
 
 *Remove this text, and add your answer for Exercise 6 here.*
 
-```{r plastic-waste-mismanaged-continent}
-# remove this comment and add the code for Exercise 6 here
-```
+ggplot(data = plastic_waste, aes(x= plastic_waste_per_cap, y = mismanaged_plastic_waste_per_cap, color = continent))+ geom_point()+ facet_wrap(~ continent)
 
 ### Exercise 7
 
 *Remove this text, and add your answer for Exercise 7 here.*
 
-```{r plastic-waste-population-total}
-# remove this comment and add the code for the first plot for Exercise 7 here
-```
+ggplot(data = plastic_waste, aes(x= plastic_waste_per_cap, y = total_pop))+ geom_point()
 
-```{r plastic-waste-population-coastal}
-# remove this comment and add the code for the second plot for Exercise 7 here
-```
+
+ggplot(data = plastic_waste, aes(x= plastic_waste_per_cap, y = coastal_pop))+ geom_point()
 
 ### Exercise 8
 
