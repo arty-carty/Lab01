@@ -29,6 +29,19 @@ ggplot(data = plastic_waste, aes(x = plastic_waste_per_cap, fill = continent)) +
 plastic_waste %>%
   filter(plastic_waste_per_cap > 3.5)
 
+<<<<<<< HEAD
+ggplot(data = plastic_waste, 
+       mapping = aes(x = plastic_waste_per_cap, 
+                     color = continent, 
+                     fill = continent)) +
+  geom_density(alpha = 0.4)
+
+
+```{r plastic-waste-continent}
+# remove this comment and add the code for Exercise 1 here
+```
+=======
+>>>>>>> 86717f8a0135fb3b9aa83cd3b015b65d53667a86
 
 ### Exercise 2
 
@@ -80,4 +93,8 @@ plastic_waste_edit <- plastic_waste %>%
 
 # remove this comment and add the code for Exercise 8 here
 ```
-
+ggplot(data = plastic_waste, aes(x = plastic_waste_per_cap)) +
+  geom_histogram(binwidth = 0.2)
+  plastic_waste %>%
+  filter(plastic_waste_per_cap > 3.5)
+  
